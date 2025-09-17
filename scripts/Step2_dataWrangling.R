@@ -8,6 +8,7 @@
 
 # Notes:
 # recall that your abundance data are TPM, while the counts are read counts mapping to each gene or transcript
+setwd(here::here())   # if you use {here}
 
 # Load packages -----
 library(tidyverse) # already know about this from Step 1 script
@@ -67,9 +68,9 @@ myDGEList <- DGEList(myCounts)
 # take a look at the DGEList object 
 myDGEList
 #DEGList objects are a good R data file to consider saving to you working directory
-save(myDGEList, file = "myDGEList")
+save(myDGEList, file = "results/myDGEList.RData")
 #Saved DGEList objects can be easily shared and loaded into an R environment
-load(file = "myDGEList")
+load("results/myDGEList.RData")
 
 # use the 'cpm' function from EdgeR to get counts per million
 cpm <- edgeR::cpm(myDGEList) 

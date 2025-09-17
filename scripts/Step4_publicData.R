@@ -1,6 +1,7 @@
 # Introduction to this script -----------
 # the goal of this script is to give you access to massive amounts of gene expression data without the need to download and analyze individual .fastq files
 # this script allows you to access RNAseq data from GEO and SRA using the "All RNA-seq and CHIP-Seq Sample and Signature Search" (ARCHS4) project (https://amp.pharm.mssm.edu/archs4)
+setwd(here::here())   # if you use {here}
 
 # Load packages ------
 # nothing new here...you should already have all these packages in your R package library

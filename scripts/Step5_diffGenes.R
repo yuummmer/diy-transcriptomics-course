@@ -4,8 +4,11 @@
 # whether you look for differential expression at the gene or transcript level depends on how you read the Kallisto output into R using TxImport back in Step 1
 # if you have no biological replicates, you will NOT be able to leverage statistical tools for differential expression analysis
 # instead, you will ONLY rely on fold changes, and can use the dplyr 'verbs' we discussed in Step 3 and 4 to identify genes based on log fold-change
+# Always run from project root
+setwd(here::here())   # if you use {here}
 
 # Load packages -----
+library(here)
 library(tidyverse) # you know it well by now!
 library(limma) # venerable package for differential gene expression using linear modeling
 library(edgeR)
@@ -98,7 +101,7 @@ datatable(diffGenes.df,
   formatRound(columns=c(2:11), digits=2)
 
 #write your DEGs to a file
-write_tsv(diffGenes.df,"DiffGenes.txt") #NOTE: this .txt file can be directly used for input into other clustering or network analysis tools (e.g., String, Clust (https://github.com/BaselAbujamous/clust, etc.)
+write_tsv(diffGenes.df,"results/DiffGenes.txt") #NOTE: this .txt file can be directly used for input into other clustering or network analysis tools (e.g., String, Clust (https://github.com/BaselAbujamous/clust, etc.)
 
 # OPTIONAL: differential transcript usage (DTU) analysis ----
 library(IsoformSwitchAnalyzeR)

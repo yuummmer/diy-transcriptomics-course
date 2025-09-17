@@ -1,6 +1,7 @@
 # Introduction to this script -----------
 #this script creates heatmaps from your differentially expressed genes or transcripts
 #and selects modules of co-expressed genes based on pearson correlations
+setwd(here::here())   # if you use {here}
 
 # Load packages -----
 library(tidyverse)

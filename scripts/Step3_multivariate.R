@@ -2,6 +2,7 @@
 # this script walks thorough techniques for data exploration and expands on last week's data wrangling theme
 # we'll also continue to create publication-quality graphics
 # This script starts with your filtered and normalized abundance data from the Step 2 script.
+setwd(here::here())   # if you use {here}
 
 # Load packages ------
 library(tidyverse) # you're familiar with this fromt the past two lectures
