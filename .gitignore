@@ -1,4 +1,14 @@
-data/
-results/
+# Ignore everything under data/ and results/
+data/*
+results/*
+
+# But keep these placeholder README files
 !data/README.md
 !results/README.md
+!results/*.png
+!results/*.csv
+!results/*.tsv
+!results/*.html
+
+# RStudio files
+.Rproj.user
