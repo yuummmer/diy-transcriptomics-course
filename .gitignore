@@ -1,14 +1,21 @@
-# Ignore everything under data/ and results/
+# --- Data (raw + big) ---
 data/*
-results/*
-
-# But keep these placeholder README files
 !data/README.md
+
+# --- Results (show small outputs only) ---
+results/*
 !results/README.md
 !results/*.png
 !results/*.csv
 !results/*.tsv
 !results/*.html
 
-# RStudio files
+# --- RStudio project files ---
 .Rproj.user
+.Rhistory
+.RData
+
+# --- Saved R objects ---
+*.RData
+*.rds
+myDGEList
