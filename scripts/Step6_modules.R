@@ -67,7 +67,7 @@ heatmap.2(diffGenes,
           Rowv=as.dendrogram(clustRows), 
           Colv=as.dendrogram(clustColumns),
           RowSideColors=module.color,
-          col=rev(myheatcolors1), scale='row', labRow=NA,
+          col=rev(myheatcolors2), scale='row', labRow=NA,
           density.info="none", trace="none",  
           cexRow=1, cexCol=1, margins=c(8,20)) 
 
